@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<body style="background-color: rgb(237, 237, 237);">
+  
+  {% include 'sidebar.html' %}
+  
+  <!-- Page content -->
+  <div class="content">
+
+    {% include 'navbar.html' %}
+      
+    <div class="about-section">
+        <div class="section">
+            <h2>Face Emotion Recognition</h2>
+            <p>Face emotion recognition, also known as facial emotion recognition, refers to the automated process of detecting and identifying the emotional states expressed by individuals through their facial expressions. This technology utilizes computer vision algorithms and machine learning techniques to analyze facial features such as the arrangement of eyebrows, eyes, nose, and mouth, as well as changes in facial muscle movements, to infer the emotional state of a person. The primary goal of face emotion recognition is to accurately categorize emotions such as happiness, sadness, anger, surprise, fear, and disgust, among others.</p>
+        </div>
+    
+        <div class="section">
+            <h2>Importance of Understanding Emotions</h2>
+            <p>Understanding emotions is crucial in various contexts, from interpersonal communication to marketing strategies. By accurately recognizing emotions, individuals can better navigate social interactions, while businesses can tailor their products and services to meet the emotional needs of their customers. Facial expressions are fundamental indicators of human emotions, playing a crucial role in interpersonal communication. However, accurately interpreting these expressions remains a challenge for many individuals. That’s why this innovative platform offers both real-time and photo-based emotion recognition, providing users with insights into the emotional states of individuals.</p>
+        </div>
+    
+        <div class="section">
+            <h2>Platform Features</h2>
+            <p>The primary purpose of this platform is to provide users with an intuitive interface for analyzing facial expressions. The platform's real-time recognition feature allows users to simply place their faces in front of the camera. A designated rectangle area on the screen captures the facial expressions, instantly analyzing them to identify the corresponding emotions. In additions, users can upload photos for detailed analysis, further expanding the platform's utility in research and practical applications. Through the upload feature, users can effortlessly submit photos for instant emotion recognition, facilitating personal insight and understanding. Furthermore, this platform enables users to explore the complexities of human emotions in diverse fields such as psychology, marketing, and human-computer interaction. Join us in unlocking the potential of facial emotion recognition technology and uncovering the stories hidden within every expression.</p>
+        </div>    
+    </div>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,174 @@
+body {
+  margin: 0;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
+  width: 200px;
+  background-color: #ffd754;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  transition: width 0.5s; /* Add transition for smoother animation */
+}
+
+/* Sidebar links */
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  padding-left: 20px;
+  text-decoration: none;
+}
+
+/* Active/current link */
+/* .sidebar a.active {
+  color: rgb(106, 106, 106);
+} */
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+  color: rgb(110, 110, 110);
+}
+
+/* Page content */
+div.content {
+  margin-left: 200px;
+  height: 1000px;
+  transition: margin-left 0.5s; /* Add transition for smoother animation */
+}
+
+/* Style the navbar */
+.navbar {
+  margin-left: 200px;
+  transition: margin-left 0.5s; /* Add transition for smoother animation */
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+/* Add some padding to the content below the sidebar */
+.content {
+  padding-top: 80px; /* Adjust according to navbar height */
+}
+
+/* Hide the sidebar when it's closed */
+.sidebar.closed {
+  width: 0;
+}
+
+/* Push the content and navbar when the sidebar is closed */
+.content.closed {
+  margin-left: 0;
+}
+
+.navbar.closed {
+  margin-left: 0;
+}
+
+hr {
+  margin-left: 7px; 
+  margin-right: 7px;
+}
+
+
+.openbtn {
+  margin-left: 15px;
+}
+
+.openbtn:hover {
+  color: rgb(169, 169, 169);
+}
+
+.main-content {
+  margin: 0px 20px;
+}
+
+#result_image_container {
+  max-width: 100%; /* Set maximum width */
+  height: auto; /* Allow height to adjust according to aspect ratio */
+  margin-top: 20px;
+}
+
+#result_image {
+  max-width: 70%; /* Set maximum width */
+  max-height: 480px; /* Set maximum height */
+  width: auto; /* Allow width to adjust according to aspect ratio */
+  height: auto; /* Allow height to adjust according to aspect ratio */
+}
+
+#emotion_video {
+  margin-top: 20px;
+}
+
+.feature-section {
+  padding: 20px;
+}
+
+.feature-section p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.feature-container {
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  margin: 5px;
+}
+
+.feature-card {
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.feature-card:hover {
+  background-color: #ffeeb6;
+  transform: scale(1.03);
+}
+
+.about-section {
+  padding: 20px;
+}
+
+.about-section h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+
+.highlight {
+  font-weight: bold;
+  color: #ffc420;
+}
+
+.section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease-in-out;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.section:hover {
+  background-color: #ffeeb6;
+  transform: scale(1.02);
+}
+
+.section:hover .text {
+  color: #fff !important;
+}
+
+.section h2 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+
+.section p {
+  font-size: 16px;
+  color: #666;
+}

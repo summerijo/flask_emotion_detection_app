@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Detection</title>
+    <link rel="icon" type="image/png" href="static/images/icons8-happy-64.png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<body style="background-color: rgb(237, 237, 237);">
+  
+  {% include 'sidebar.html' %}
+  
+  <!-- Page content -->
+  <div class="content">
+
+    {% include 'navbar.html' %}
+      
+
+      <div class="main-content">
+        <h2>Dashboard</h2>
+        <div class="row" style="height: 78vh;" >
+          <!-- Image Upload -->
+          <div class="col-md-6 d-flex align-items-stretch">
+            <div class="card bg-secondary w-100" style="border-radius: 0;">
+              <div class="card-header p-2">
+                <i class="fa fa-crosshairs"></i>&nbsp;CNN Image Emotion Detection
+              </div>
+              <div class="card-body">
+                <!-- Form for uploading an image -->
+                <form id="upload_form" action="/upload" method="post" enctype="multipart/form-data" style="margin-top: 20px;">
+                  <input id="file_input" type="file" name="file" accept="image/*">
+                  <button class="btn btn-dark" type="button" onclick="uploadImage()">Upload Image</button>
+                </form>
+                <!-- Display the result image -->
+                <div id="result_image_container">
+                  {% if result_image %}
+                  <img id="result_image" src="data:image/jpeg;base64,{{ result_image }}" />
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Real-time Video -->
+          <div class="col-md-6 d-flex align-items-stretch">
+            <div class="card bg-secondary w-100" style="border-radius: 0;">
+              <div class="card-header p-2">
+                <i class="fa fa-crosshairs"></i>&nbsp;CNN Real-time Emotion Detection
+              </div>
+              <div class="card-body">
+                <!-- Real-time content and everything -->
+                <!-- Button for starting/stopping real-time emotion detection -->
+                <button class="btn btn-dark" id="real_time_button" onclick="realTimeEnabled ? stopRealTime() : startRealTime()">
+                  Start Real-time Emotion Detection
+                </button>
+                <br>
+              <!-- Display the real-time emotion detection video -->
+              <img id="emotion_video" style="max-width: 100%; height: auto;" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</body>
+</html>

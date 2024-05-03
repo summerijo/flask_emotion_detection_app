@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<body style="background-color: rgb(237, 237, 237);">
+  
+  {% include 'sidebar.html' %}
+  
+  <!-- Page content -->
+  <div class="content">
+
+    {% include 'navbar.html' %}
+      
+    <div class="feature-section">
+        <h2>Feature Section</h2>
+        <p>The platform features two primary modes of operation:
+            <span class="highlight">real-time</span> and <span class="highlight">photo-based</span> emotion recognition.</p>
+
+        <div class="row">
+          <div class="col-md-6 d-flex align-items-stretch">
+            <div class="card feature-card">
+            <h4><i class="fa fa-video-camera" style="font-size:24px"></i>&ensp; Real-time Detection</h4>
+            <p>In the real-time mode, users can activate their device's camera and position their faces within a designated rectangle area on the screen. The platform then analyzes facial expressions captured by the camera in real-time, providing immediate feedback on the emotional states detected. This feature enables users to gain insight into their own emotions or those of others in live interactions, enhancing self-awareness and interpersonal communication skills.</p>    
+          </div>
+          </div>
+          <div class="col-md-6 d-flex align-items-stretch">
+            <div class="card feature-card">
+            <h4><i class="fa fa-file-picture-o" style="font-size:24px"></i>&ensp; Image-Based Detection</h4>
+            <p>In addition, the platform offers a photo-based emotion recognition feature, allowing users to upload images for detailed analysis. Upon uploading a photo, the platform uses its advanced algorithms to examine facial features and expressions, identifying and categorizing the emotions depicted in the image. This functionality facilitates deeper exploration of emotions and provides users with valuable insights into the emotional content of images. Whether used for personal reflection, research purposes, or practical applications in fields such as psychology and marketing, the photo-based feature extends the platform's utility and enhances its accessibility to users seeking to understand and interpret human emotions.</p>
+          </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</body>
+</html>
